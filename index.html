@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I design, You Build!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- m-container = Main Container. It stores all the main content within itself. -->
+    <div id="m-container">
+        <div id="left-content">
+            <!-- title-container is where I store the main title of the page. -->
+            <div class="title-container">
+                <!-- I decided the use a class called page-title so I could further mess with this one H1 later on the project. -->
+                <h1 class="page-title">Xae</h1>
+            </div>
+            <!-- a-container = Aside container. Stores the left side of the page within itself. -->
+            <div class="a-container">
+                <a href="#"><img class="social-imgs" src="assets/GgFacebook.svg" alt="icon facebook"></a>
+                <a href="#"><img class="social-imgs" src="assets/MdiInstagram.svg" alt="icon instagram"></a>
+                <a href="#"><img class="social-imgs" src="assets/MdiTwitter.svg" alt="icon twitter"></a>
+            </div>
+        </div>
+        <div id="right-content">
+            <div class="nav-menu">
+                <nav>
+                <a class="change-text" href="#">Home</a>
+                <a class="change-text" href="#">About</a>
+                <a class="change-text" href="#">Gallery</a>
+                <a class="change-text" href="#">Contact</a>
+                <img class="light-source" src="assets/Light.png" alt="switch light-mode" onclick="modeswitch()">
+                </nav>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

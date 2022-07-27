@@ -14,6 +14,7 @@ body {
 /* All the CSS here is in order of appearence in the HTML, to make it easier to find it in the whole project. */
 
 #m-container {
+    position: relative;
     transition: 0.5s ease-in-out;
     display: flex;
     min-width: 300px;
@@ -22,7 +23,7 @@ body {
     margin: 10vh auto;
     border: 1px solid white;
     border-radius: 10px;
-    background-color: #2b2b2b;
+    background: linear-gradient(to left, #0C0C0C, #2c4550);
 }
 
 #left-content {
@@ -67,13 +68,16 @@ body {
 }
 
 #right-content {
+    position: relative;
     width: 100%;
     display: flex;
-   
 }
 
 .nav-menu {
+    position: absolute;
+    right: 30px;
     width: 100%;
+    height: 10%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -81,14 +85,13 @@ body {
 
 nav {
     display: flex;
-    flex-direction: row;
     font-size: 15px;
     padding: 15px;
     height: 10px;
 }
 
 
-nav > img {
+.light-source {
     height: 30px;
     width: 100%;
     margin: 10px;
@@ -110,8 +113,49 @@ nav > img:hover {
     border-bottom: 1px solid white
 }
 
-main {
-    background: #868181;
+
+#mid-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 120px;
+}
+
+.main-content {
+    height: auto;
+    width: 379px;
+    text-align: justify;
+}
+
+.adventure-title{
+    transition: 0.5s ease-in-out;
+    color: white;
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+.text {
+    transition: 0.5s ease-in-out;
+    color: white;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    font-weight: 500;
+}
+
+.character {
+    position: absolute;
+    top: 154px; /*154px  */
+    right: 443px; /* 443px */
+    width: 250px;
+}
+
+.blocks{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 900px;
+    z-index: 0;
 }
 
 /* Beyond this point is the CSS triggered by the JS. */
@@ -148,3 +192,12 @@ nav.active > a  {
     filter: brightness(0);
 }
 
+.adventure-title.active {
+    transition: 0.5s ease-in-out;
+    color: black;
+}
+
+.text.active {
+    transition: 0.5s ease-in-out;
+    color: black;
+}

@@ -1,3 +1,5 @@
+/* Hello! I've started this as a practice. Midway through I've started testing some position stuff and some transform as well. This is not my best CSS, but I tried my best to apply the concepts I know so far.  */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 
 * {
@@ -97,18 +99,18 @@ nav {
     margin: 10px;
 }
 
-nav > a {
+nav>a {
     margin: 15px;
     text-decoration: none;
     color: white;
 }
 
-nav > a:hover {
+nav>a:hover {
     color: #2c4550;
     text-decoration: underline;
 }
 
-nav > img:hover {
+nav>img:hover {
     cursor: pointer;
     border-bottom: 1px solid white
 }
@@ -128,7 +130,7 @@ nav > img:hover {
     text-align: justify;
 }
 
-.adventure-title{
+.adventure-title {
     transition: 0.5s ease-in-out;
     color: white;
     font-size: 2.3rem;
@@ -145,17 +147,82 @@ nav > img:hover {
 
 .character {
     position: absolute;
-    top: 154px; /*154px  */
-    right: 443px; /* 443px */
+    top: 154px;
+    right: 443px;
     width: 250px;
 }
 
-.blocks{
+.blocks {
     position: absolute;
     top: 30px;
     right: 0;
     width: 900px;
     z-index: 0;
+}
+
+
+footer {
+    position: absolute;
+    background: radial-gradient(100% 100% at 0% 0%, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.558) 100%);
+    backdrop-filter: blur(5px);
+    left: 76px;
+    bottom: 0;
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    width: 94.7%;
+}
+
+.astronaut {
+    margin-left: 6vw;
+    height: auto;
+    width: 25vh;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 3vw;
+}
+
+.footer-title{
+    transition: 0.5s ease-in-out;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.footer-text1 {
+    padding-top: 5px;
+    text-align: justify;
+    font-size: 0.8rem;
+    width: 300px;
+    transition: 0.5s ease-in-out;
+    color: white;
+}
+
+.arrow {
+    transform: translateX(-20px) translateY(150px);
+    width: auto;
+    transition: 0.5s ease-in-out;
+    height: 10px;
+}
+
+.text-container2 {
+    transform: translateX(180px);
+}
+
+.footer-title2{
+    transition: 0.5s ease-in-out;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.footer-text2{
+    color: white;
+    transition: 0.5s ease-in-out;
 }
 
 /* Beyond this point is the CSS triggered by the JS. */
@@ -164,15 +231,15 @@ nav > img:hover {
     transition: 0.5s ease-in-out;
     border: 1px solid black;
     background: white;
-    
+
 }
 
-#left-content.active{
+#left-content.active {
     transition: 0.5s ease-in-out;
     border-right: 1px solid black;
 }
 
-nav.active > a  {
+nav.active>a {
     transition: 0.5s ease-in-out;
     color: black;
 }
@@ -182,7 +249,7 @@ nav.active > a  {
     color: black;
 }
 
-.a-container.active > a > img {
+.a-container.active>a>img {
     transition: 0.5s ease-in-out;
     filter: invert(0)
 }
@@ -198,6 +265,26 @@ nav.active > a  {
 }
 
 .text.active {
+    transition: 0.5s ease-in-out;
+    color: black;
+}
+
+.footer-text1.active{
+    transition: 0.5s ease-in-out;
+    color: black;
+}
+
+.footer-text2.active{
+    transition: 0.5s ease-in-out;
+    color: black;
+}
+
+.arrow.active{
+    transition: 0.5s ease-in-out;
+    filter: invert(1);
+}
+
+.footer-title2.active {
     transition: 0.5s ease-in-out;
     color: black;
 }
